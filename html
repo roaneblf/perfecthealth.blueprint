@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerfectHealth Blueprint - Achieve Your Dream Body</title>
+    <meta name="description" content="Join PerfectHealth Blueprint for customized health packages including workout plans, nutrition guides, and expert coaching. Book your free online meeting today!">
+    <meta name="keywords" content="health, fitness, wellness, personalized plans, online coaching, nutrition, exercise">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+            color: #333;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        header {
+            background: #00796b;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+        .hero {
+            background-image: url('https://source.unsplash.com/1600x900/?health,fitness');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 0 0 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .intro {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .intro h2 {
+            font-size: 2.2em;
+            color: #004d40;
+            margin: 20px 0;
+        }
+        .intro p {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .package {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            min-width: 300px;
+            margin-right: 20px;
+            flex-shrink: 0;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .package:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .price {
+            font-size: 1.6em;
+            color: #e91e63;
+            margin: 20px 0;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+            font-size: 1.2em;
+        }
+        .button {
+            display: inline-block;
+            background: #004d40;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background 0.3s ease, transform 0.3s ease;
+            margin-top: 15px;
+        }
+        .button:hover {
+            background: #003d33;
+            transform: scale(1.05);
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .carousel-button.left {
+            left: 10px;
+        }
+        .carousel-button.right {
+            right: 10px;
+        }
+        footer {
+            background: #00796b;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .intro h2 {
+                font-size: 1.8em;
+            }
+            .carousel {
+                flex-direction: column;
+                align-items: center;
+            }
+            .package {
+                width: 90%; /* Full width on small screens */
+                margin: 10px 0; /* Space between cards */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PerfectHealth Blueprint</h1>
+    </header>
+    <div class="hero">
+        <h2>Achieve Your Dream Body</h2>
+        <p>Your journey to optimal health starts here. Explore our customized packages to fit your lifestyle.</p>
+    </div>
+    <div class="container">
+        <div class="intro">
+            <h2>Transform Your Health Today!</h2>
+            <p>Select the perfect package to start your journey. Our plans are designed to meet your needs at every step. Book a free online meeting to learn more.</p>
+        </div>
+        <div class="carousel">
+            <button class="carousel-button left" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-track">
+                <div class="package">
+                    <h2>Foundation Blueprint</h2>
+                    <div class="price">$45 <span class="old-price">$85</span></div>
+                    <p>Start with the essentials:</p>
+                    <ul>
+                        <li>Personalized Workout Plan</li>
+                        <li>Basic Nutrition Guide</li>
+                        <li>Weekly Progress Tracking</li>
+                        <li>Community Access</li>
+                        <li>Weekly Q&A Sessions</li>
+                    </ul>
+                    <a href="https://forms.gle/wJ1ejzXUEY9Q3rhE9" class="button">Book a Free Online Meeting</a>
+                </div>
+                <div class="package">
+                    <h2>Advanced Blueprint</h2>
+                    <div class="price">$135 <span class="old-price">$250</span></div>
+                    <p>Enhance your journey:</p>
+                    <ul>
+                        <li>Everything in the Foundation Blueprint</li>
+                        <li>Customized Supplement Plan</li>
+                        <li>24/7 Expert Support</li>
+                        <li>Comprehensive Nutrition Plan</li>
+                        <li>Exclusive Fitness Library</li>
+                    </ul>
+                    <a href="https://forms.gle/wJ1ejzXUEY9Q3rhE9" class="button">Book a Free Online Meeting</a>
+                </div>
+                <div class="package">
+                    <h2>Ultimate Blueprint</h2>
+                    <div class="price">$405 <span class="old-price">$900</span></div>
+                    <p>Achieve peak health:</p>
+                    <ul>
+                        <li>Everything in the Advanced Blueprint</li>
+                        <li>Genetic Health Analysis</li>
+                        <li>Monthly Supplement Deliveries</li>
+                        <li>1-on-1 Expert Coaching</li>
+                        <li>Complete Holistic Health Plan</li>
+                        <li>Exclusive Health Research</li>
+                    </ul>
+                    <a href="https://forms.gle/wJ1ejzXUEY9Q3rhE9" class="button">Book a Free Online Meeting</a>
+                </div>
+            </div>
+            <button class="carousel-button right" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 PerfectHealth Blueprint. All rights reserved.</p>
+    </footer>
+    <script>
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+            const track = document.querySelector('.carousel-track');
+            const packages = document.querySelectorAll('.package');
+            const totalPackages = packages.length;
+
+            currentIndex = (currentIndex + direction + totalPackages) % totalPackages;
+            const offset = -currentIndex * (packages[0].clientWidth + 20); // 20 for margin-right
+            track.style.transform = `translateX(${offset}px)`;
+        }
+    </script>
+</body>
+</html>              check and tell me each thing where to place them to work
